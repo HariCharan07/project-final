@@ -1,0 +1,97 @@
+
+
+
+	Data Base Schemas for Book Review System 
+
+
+	create database books; 
+
+	use books; 
+
+  
+
+-- Books Table  
+
+CREATE TABLE IF NOT EXISTS `books`.`book` (  
+
+  `id` INT NOT NULL AUTO_INCREMENT,  
+
+  `author` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `category` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `description` VARCHAR(255) NULL DEFAULT NULL, 
+
+  `enable` VARCHAR(255) NULL DEFAULT NULL, 
+
+  `name` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `price` INT NOT NULL,  
+
+  PRIMARY KEY (`id`))  
+
+  
+
+ 
+--Admin Table  
+
+CREATE TABLE IF NOT EXISTS `books`.`admin` (  
+
+  `id` INT NOT NULL AUTO_INCREMENT,  
+
+  `password` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `username` VARCHAR(255) NULL DEFAULT NULL,  
+
+  PRIMARY KEY (`id`))  
+
+  
+
+  
+
+-- Review Table  
+
+CREATE TABLE IF NOT EXISTS `books`.`review` (  
+
+  `id` INT NOT NULL AUTO_INCREMENT,  
+
+  `bookname` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `bname` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `rating` FLOAT NOT NULL,  
+
+  `review` VARCHAR(255) NULL DEFAULT NULL,  
+
+  PRIMARY KEY (`id`))  
+
+  
+
+ 
+--User Details  
+
+CREATE TABLE IF NOT EXISTS `books`.`user` (  
+
+  `email` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `name` VARCHAR(255) NULL DEFAULT NULL,  
+
+  `password` VARCHAR(255) NULL DEFAULT NULL,  
+
+  PRIMARY KEY (`id`))  
+
+  
+
+-- Queries  
+
+select * from books;  
+
+select * from user;  
+
+select * from admin;  
+
+select * from review; 
+
+ 
+
+ 
